@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/128/18786/18786572.png"
+      type="image/x-icon" />
+    <link href="output.css" rel="stylesheet" />
+    <title>DAWAN SHOP</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="container mx-auto">
+    <!-- HEADER -->
+    <div class="navbar bg-base-200 shadow-lg rounded-b-md sticky top-0 z-50">
+      <div class="flex-1">
+        <a class="flex items-center space-x-1">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/18786/18786572.png"
+            alt=""
+            srcset=""
+            class="size-12" />
+          <span class="text-3xl">DAWAN-SHOP</span>
+        </a>
+      </div>
+
+      <div class="drawer-content">
+        <!-- Page content here -->
+        <label for="my-drawer-4"
+          ><div class="flex-none">
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <div class="indicator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span
+                    id="cart-item-list"
+                    class="badge badge-sm indicator-item text-blue-500"
+                    >0</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <!-- CARD -->
+    <div
+      id="product"
+      class="mt-3 mx-5 lg:mx-0 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <!-- <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          <div class="flex justify-between">
+            <h2 class="card-title">${shortTitle}</h2>
+            <button
+              onclick="addToCart(this)"
+              data-id="${id}"
+              data-title="${title}"
+              data-price="${price}"
+              data-image="${image}"
+              class="btn btn-neutral">
+              ADD TO CART
+            </button>
+          </div>
+          <h4 class="flex items-center justify-between text-2xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-8">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+            </svg>
+            <div className="divider-neutral w-full">PRICE</div>
+
+            <span class="text-blue-500">${price}</span>
+          </h4>
+          <p>${shortDescription}!</p>
+        </div>
+        <figure>
+          <img
+            class="h-[400px] w-full object-fill"
+            src="${image}"
+            alt="Shoes" />
+        </figure>
+      </div> -->
+    </div>
+    <!-- CARD-LIST -->
+    <div class="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-side z-50">
+        <label
+          for="my-drawer-4"
+          aria-label="close sidebar"
+          class="drawer-overlay"></label>
+        <div class="menu bg-base-200 text-base-content min-h-full w-96">
+          <ul id="cart-list">
+            <!-- <li>
+              <div class="flex items-start space-x-2">
+                <img
+                  src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+                  alt=""
+                  srcset=""
+                  class="size-20 object-fill rounded-md" />
+                <div>
+                  <h1 class="text-xl">Mens Casual</h1>
+                  <h4 class="flex space-x-5 items-center text-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                    </svg>
+                    <div className="divider-neutral w-full">PRICE</div>
+
+                    <span>50933</span>
+                  </h4>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-5">
+                  <button class="btn btn-square btn-error btn-xs">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 text-white">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 12h14" />
+                    </svg>
+                  </button>
+                  <span class="text-xl">111</span>
+                  <button class="btn btn-square btn-primary btn-xs">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6 text-white">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn btn-square btn-error btn-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-white">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                  </svg>
+                </button>
+              </div>
+            </li> -->
+            <!-- <div class="divider"></div> -->
+          </ul>
+          <div
+            class="bg-base-100 sticky bottom-0 p-3 space-y-3 rounded-md shadow-md">
+            <div class="flex items-center space-x-3">
+              <h1 class="text-lg">Total Item:</h1>
+              <h1 id="total-item" class="text-lg">0</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="flex items-center space-x-3">
+              <h1 class="text-xl">Total Price:</h1>
+              <h1 id="total-price" class="text-xl">0</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="flex items-center space-x-3">
+              <h1 class="text-xl">Discount Price:</h1>
+              <h1 id="discount-amount" class="text-xl">0</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="flex space-x-3 items-center">
+              <input
+                id="coupon-code"
+                type="text"
+                placeholder="Coupon Code"
+                class="input input-bordered w-full max-w-xs" />
+
+              <button id="couponCodeBtn" class="btn btn-info text-white">
+                APPLY
+              </button>
+            </div>
+            <div class="space-y-3">
+              <button
+                onclick="cartClear()"
+                class="btn btn-block btn-error btn-md text-white text-xl">
+                CLEAR ALL
+              </button>
+              <button
+                id="orderBtn"
+                class="btn btn-block btn-primary btn-md text-white text-xl">
+                ORDER PLACE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <script src="index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
